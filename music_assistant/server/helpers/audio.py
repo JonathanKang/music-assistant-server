@@ -392,7 +392,7 @@ async def get_stream_details(
         and await mass.config.get_core_config_value("streams", CONF_BYPASS_NORMALIZATION_RADIO)
     ) or (
         streamdetails.duration is not None
-        and streamdetails.duration < 30
+        and streamdetails.duration < 60
         and await mass.config.get_core_config_value("streams", CONF_BYPASS_NORMALIZATION_SHORT)
     )
     if not streamdetails.loudness:
